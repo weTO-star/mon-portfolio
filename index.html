@@ -1,43 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wells Todison - Portfolio</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #fff;
-            color: #333;
-        }
-        header {
-            background: #0a0a0a;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-        h1, h2 {
-            color: #0056b3;
-        }
-        .contact {
-            background: #f0f0f0;
-            padding: 20px;
-            margin-top: 30px;
-        }
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #0a0a0a;
-            color: white;
-            margin-top: 30px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - [Ton Nom]</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+  body {
+        background-color: #121212;
+        color: #fff;
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center; /* CENTRAGE des textes */
+    }
+    header {
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #00aaff; /* Bleu vif */
+      margin-bottom: 10px;
+    }
+    header p {
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    main {
+      width: 100%;
+      max-width: 900px;
+      background: #1f1f1f;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,170,255,0.5);
+    }
+    h2 {
+      color: #00aaff;
+      margin-bottom: 15px;
+    }
+    p {
+      margin-bottom: 15px;
+      color: #ddd;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 8px rgba(0,170,255,0.5);
+    }
+    /* Boutons stylés */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #00aaff;
+      color: #121212;
+      font-weight: 700;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background-color: #008ecc;
+      color: #fff;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      main {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
     <header>
@@ -90,9 +141,17 @@
 
     <section class="contact">
         <h2>Me Contacter</h2>
-        <p>Email : wellstodison@gmail.com</p>
-        <p>LinkedIn : Wells TODISON</p>
-        <p>WhatsApp : +261 32 64 123 38</p>
+        <a href="mailto:wellstodison@gmail.com" 
+   style="display:inline-block; background-color:#00aaff; color:#121212; 
+          padding:10px 20px; border-radius:5px; text-decoration:none; 
+          font-weight:bold; font-family: 'Montserrat', sans-serif; margin-top:10px;">
+  📧 wellstodison@gmail.com
+</a><br>
+        <a href="https://www.linkedin.com/in/wells-todison-473151259/" class="btn" target="_blank" rel="noopener noreferrer">Wells TODISON (In)</a><br>
+        <a href="https://wa.me/261326412338" target="_blank" rel="noopener noreferrer" 
+         style="display:inline-block; background-color:#25D366; color:white; padding:10px 15px; border-radius:5px; text-decoration:none; font-weight:bold; font-family: 'Montserrat', sans-serif; margin-top:10px;">
+          📞 Contactez-moi sur WhatsApp
+        </a>
     </section>
 
     <footer>
