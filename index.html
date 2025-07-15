@@ -28,99 +28,95 @@
     </script>
 </head>
 <body class="bg-gray-900 text-white">
-    <!-- Header -->
-    <header class="bg-gradient-to-r from-blue-600 via-black to-blue-900 p-6">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-bold">Wells Todison</h1>
-            <a href="#contact" class="btn-animated bg-blue-500 px-4 py-2 rounded-xl hover:bg-blue-700 transition">Me Contacter</a>
-        </div>
-    </header>
 
-    <!-- Qui suis-je -->
-    <section class="container mx-auto p-6">
-        <h2 class="text-2xl font-bold mb-4">Qui suis-je ?</h2>
-        <p class="text-lg">Spécialiste indépendant de la prospection commerciale B2B, je transforme vos leads en clients.
-        J'interviens sur des campagnes de prospection multi-canal, locales et internationales, avec un accompagnement sur mesure et une approche humaine.</p>
-    </section>
+<header class="bg-gradient-to-r from-blue-600 via-black to-blue-900 p-6">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-3xl font-bold">Wells Todison</h1>
+        <a href="#contact" class="btn-animated bg-blue-500 px-4 py-2 rounded-xl hover:bg-blue-700 transition">Me Contacter</a>
+    </div>
+</header>
 
-    <!-- Services -->
-    <section class="container mx-auto p-6 bg-gray-800 rounded-xl my-6">
-        <h2 class="text-2xl font-bold mb-4">Services Proposés</h2>
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <li class="bg-gray-700 p-4 rounded-xl cursor-pointer flex items-start gap-2" onclick="toggleDescription('desc1', this)">
-                <i class="ph ph-target text-2xl"></i> Prospection commerciale B2B multi-canal
-                <p id="desc1" class="hidden mt-2">Identifier des prospects, les contacter via différents canaux et créer des opportunités d'affaires adaptées.</p>
-            </li>
-            <li class="bg-gray-700 p-4 rounded-xl cursor-pointer flex items-start gap-2" onclick="toggleDescription('desc2', this)">
-                <i class="ph ph-phone-call text-2xl"></i> Cold Calling & Closing
-                <p id="desc2" class="hidden mt-2">Contacter directement les prospects par téléphone pour conclure des ventes ou obtenir des rendez-vous.</p>
-            </li>
-            <li class="bg-gray-700 p-4 rounded-xl cursor-pointer flex items-start gap-2" onclick="toggleDescription('desc3', this)">
-                <i class="ph ph-calendar-check text-2xl"></i> Prise de rendez-vous qualifiés
-                <p id="desc3" class="hidden mt-2">Organiser des rendez-vous avec des prospects ayant un réel intérêt pour les services proposés.</p>
-            </li>
-            <li class="bg-gray-700 p-4 rounded-xl cursor-pointer flex items-start gap-2" onclick="toggleDescription('desc4', this)">
-                <i class="ph ph-user-check text-2xl"></i> Qualification de leads
-                <p id="desc4" class="hidden mt-2">Analyser et identifier les besoins des prospects afin de déterminer leur potentiel en tant que clients.</p>
-            </li>
-            <li class="bg-gray-700 p-4 rounded-xl cursor-pointer flex items-start gap-2" onclick="toggleDescription('desc5', this)">
-                <i class="ph ph-handshake text-2xl"></i> Suivi commercial et fidélisation
-                <p id="desc5" class="hidden mt-2">Maintenir une relation continue avec les clients pour assurer leur satisfaction et générer des ventes récurrentes.</p>
-            </li>
-        </ul>
-    </section>
+<section class="container mx-auto p-6">
+    <h2 class="text-2xl font-bold mb-4">Qui suis-je ?</h2>
+    <p class="text-lg">Spécialiste indépendant de la prospection commerciale B2B, je transforme vos leads en clients.
+    J'interviens sur des campagnes de prospection multi-canal, locales et internationales, avec un accompagnement sur mesure et une approche humaine.</p>
+</section>
 
-    <!-- Compétences -->
-    <section class="container mx-auto p-6">
-        <h2 class="text-2xl font-bold mb-4">Compétences</h2>
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <li class="bg-gray-700 p-4 rounded-xl flex items-start gap-2 cursor-pointer" onclick="toggleDescription('comp1', this)">
-                <i class="ph ph-microphone text-2xl"></i> Prospection téléphonique
-                <p id="comp1" class="hidden mt-2">Maîtrise des techniques d’appel à froid et d’accroche commerciale, pour convertir un maximum de prospects en opportunités concrètes.</p>
-            </li>
-            <li class="bg-gray-700 p-4 rounded-xl flex items-start gap-2 cursor-pointer" onclick="toggleDescription('comp2', this)">
-                <i class="ph ph-seal-check text-2xl"></i> Closing de ventes B2B
-                <p id="comp2" class="hidden mt-2">Capacité à mener des négociations, à comprendre les objections et à finaliser les contrats avec assurance et méthode.</p>
-            </li>
-            <li class="bg-gray-700 p-4 rounded-xl flex items-start gap-2 cursor-pointer" onclick="toggleDescription('comp3', this)">
-                <i class="ph ph-database text-2xl"></i> Utilisation de CRM (Pipedrive, Asana)
-                <p id="comp3" class="hidden mt-2">Organisation rigoureuse des données clients et suivi efficace des opportunités via des outils CRM professionnels.</p>
-            </li>
-            <li class="bg-gray-700 p-4 rounded-xl flex items-start gap-2 cursor-pointer" onclick="toggleDescription('comp4', this)">
-                <i class="ph ph-chat-centered-text text-2xl"></i> Communication multi-canal
-                <p id="comp4" class="hidden mt-2">Maîtrise des outils de communication écrite et orale : email, LinkedIn, téléphone, afin de maximiser les chances de contact et d’engagement.</p>
-            </li>
-        </ul>
-    </section>
+<section class="container mx-auto p-6 bg-gray-800 rounded-xl my-6">
+    <h2 class="text-2xl font-bold mb-4">Services Proposés</h2>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <li class="bg-gray-700 p-4 rounded-xl cursor-pointer flex items-start gap-2" onclick="toggleDescription('desc1', this)">
+            <i class="ph ph-target text-2xl"></i> Prospection commerciale B2B multi-canal
+            <p id="desc1" class="hidden mt-2">Identifier des prospects, les contacter via différents canaux et créer des opportunités d'affaires adaptées.</p>
+        </li>
+        <li class="bg-gray-700 p-4 rounded-xl cursor-pointer flex items-start gap-2" onclick="toggleDescription('desc2', this)">
+            <i class="ph ph-phone-call text-2xl"></i> Cold Calling & Closing
+            <p id="desc2" class="hidden mt-2">Contacter directement les prospects par téléphone pour conclure des ventes ou obtenir des rendez-vous.</p>
+        </li>
+        <li class="bg-gray-700 p-4 rounded-xl cursor-pointer flex items-start gap-2" onclick="toggleDescription('desc3', this)">
+            <i class="ph ph-calendar-check text-2xl"></i> Prise de rendez-vous qualifiés
+            <p id="desc3" class="hidden mt-2">Organiser des rendez-vous avec des prospects ayant un réel intérêt pour les services proposés.</p>
+        </li>
+        <li class="bg-gray-700 p-4 rounded-xl cursor-pointer flex items-start gap-2" onclick="toggleDescription('desc4', this)">
+            <i class="ph ph-user-check text-2xl"></i> Qualification de leads
+            <p id="desc4" class="hidden mt-2">Analyser et identifier les besoins des prospects afin de déterminer leur potentiel en tant que clients.</p>
+        </li>
+        <li class="bg-gray-700 p-4 rounded-xl cursor-pointer flex items-start gap-2" onclick="toggleDescription('desc5', this)">
+            <i class="ph ph-handshake text-2xl"></i> Suivi commercial et fidélisation
+            <p id="desc5" class="hidden mt-2">Maintenir une relation continue avec les clients pour assurer leur satisfaction et générer des ventes récurrentes.</p>
+        </li>
+    </ul>
+</section>
 
-    <!-- Galerie d'image -->
-    <section class="container mx-auto p-6">
-        <h2 class="text-2xl font-bold mb-4">Galerie</h2>
-        <div class="grid grid-cols-1 gap-4">
-            <img src="image1.jpg" alt="Image" class="rounded-xl">
-        </div>
-    </section>
+<section class="container mx-auto p-6">
+    <h2 class="text-2xl font-bold mb-4">Compétences</h2>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <li class="bg-gray-700 p-4 rounded-xl flex items-start gap-2 cursor-pointer" onclick="toggleDescription('comp1', this)">
+            <i class="ph ph-microphone text-2xl"></i> Prospection téléphonique
+            <p id="comp1" class="hidden mt-2">Maîtrise des techniques d’appel à froid et d’accroche commerciale, pour convertir un maximum de prospects en opportunités concrètes.</p>
+        </li>
+        <li class="bg-gray-700 p-4 rounded-xl flex items-start gap-2 cursor-pointer" onclick="toggleDescription('comp2', this)">
+            <i class="ph ph-seal-check text-2xl"></i> Closing de ventes B2B
+            <p id="comp2" class="hidden mt-2">Capacité à mener des négociations, à comprendre les objections et à finaliser les contrats avec assurance et méthode.</p>
+        </li>
+        <li class="bg-gray-700 p-4 rounded-xl flex items-start gap-2 cursor-pointer" onclick="toggleDescription('comp3', this)">
+            <i class="ph ph-database text-2xl"></i> Utilisation de CRM (Pipedrive, Asana)
+            <p id="comp3" class="hidden mt-2">Organisation rigoureuse des données clients et suivi efficace des opportunités via des outils CRM professionnels.</p>
+        </li>
+        <li class="bg-gray-700 p-4 rounded-xl flex items-start gap-2 cursor-pointer" onclick="toggleDescription('comp4', this)">
+            <i class="ph ph-chat-centered-text text-2xl"></i> Communication multi-canal
+            <p id="comp4" class="hidden mt-2">Maîtrise des outils de communication écrite et orale : email, LinkedIn, téléphone, afin de maximiser les chances de contact et d’engagement.</p>
+        </li>
+    </ul>
+</section>
 
-    <!-- Contact -->
-    <section id="contact" class="container mx-auto p-6">
-        <h2 class="text-2xl font-bold mb-4">Me contacter</h2>
-        <form class="grid grid-cols-1 gap-4">
-            <input type="text" placeholder="Nom et Prénom" class="p-2 rounded bg-gray-700 text-white">
-            <input type="email" placeholder="Adresse Email" class="p-2 rounded bg-gray-700 text-white">
-            <input type="text" placeholder="Secteur d'activité" class="p-2 rounded bg-gray-700 text-white">
-            <input type="text" placeholder="Service recherché" class="p-2 rounded bg-gray-700 text-white">
-            <button type="submit" class="btn-animated bg-blue-500 px-4 py-2 rounded-xl hover:bg-blue-700 transition">Envoyer</button>
-        </form>
-        <div class="flex justify-center space-x-4 mt-6">
-            <a href="https://wa.me/tonnumero" class="btn-animated bg-green-500 px-4 py-2 rounded-xl flex items-center gap-2"><i class="ph ph-whatsapp-logo"></i> WhatsApp</a>
-            <a href="mailto:wells.todison@example.com" class="btn-animated bg-blue-500 px-4 py-2 rounded-xl flex items-center gap-2"><i class="ph ph-envelope"></i> Email</a>
-            <a href="https://www.linkedin.com/in/tonprofil" class="btn-animated bg-blue-700 px-4 py-2 rounded-xl flex items-center gap-2"><i class="ph ph-linkedin-logo"></i> LinkedIn</a>
-        </div>
-    </section>
+<section class="container mx-auto p-6">
+    <h2 class="text-2xl font-bold mb-4">Galerie</h2>
+    <div class="grid grid-cols-1 gap-4">
+        <img src="image1.jpg" alt="Image" class="rounded-xl">
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 p-4 text-center">
-        <p>© 2025 Wells Todison - Tous droits réservés</p>
-    </footer>
+<section id="contact" class="container mx-auto p-6">
+    <h2 class="text-2xl font-bold mb-4">Me contacter</h2>
+    <form action="https://formsubmit.co/tonadresse@mail.com" method="POST" class="grid grid-cols-1 gap-4">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="Nom et Prénom" placeholder="Nom et Prénom" required class="p-2 rounded bg-gray-700 text-white">
+        <input type="email" name="Adresse Email" placeholder="Adresse Email" required class="p-2 rounded bg-gray-700 text-white">
+        <input type="text" name="Secteur d'activité" placeholder="Secteur d'activité" class="p-2 rounded bg-gray-700 text-white">
+        <input type="text" name="Service recherché" placeholder="Service recherché" class="p-2 rounded bg-gray-700 text-white">
+        <button type="submit" class="btn-animated bg-blue-500 px-4 py-2 rounded-xl hover:bg-blue-700 transition">Envoyer</button>
+    </form>
+    <div class="flex justify-center space-x-4 mt-6">
+        <a href="https://wa.me/tonnumero" class="btn-animated bg-green-500 px-4 py-2 rounded-xl flex items-center gap-2"><i class="ph ph-whatsapp-logo"></i> WhatsApp</a>
+        <a href="mailto:wells.todison@example.com" class="btn-animated bg-blue-500 px-4 py-2 rounded-xl flex items-center gap-2"><i class="ph ph-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/tonprofil" class="btn-animated bg-blue-700 px-4 py-2 rounded-xl flex items-center gap-2"><i class="ph ph-linkedin-logo"></i> LinkedIn</a>
+    </div>
+</section>
+
+<footer class="bg-gray-800 p-4 text-center">
+    <p>© 2025 Wells Todison - Tous droits réservés</p>
+</footer>
+
 </body>
 </html>
