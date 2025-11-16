@@ -3,134 +3,667 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wells TODISON – Spécialiste Prospection B2B</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-    <meta name="description" content="Freelance à Madagascar, spécialisé dans la prospection commerciale B2B. Attirez de nouveaux clients avec une prospection et acquisition de client sur mesure.">
-    <meta name="keywords" content="portfolio freelance, création portfolio Madagascar, prospection B2B, Wells Todison, cold calling, business development">
-    <meta name="author" content="Wells Todison">
-
-    <!-- Balises Open Graph pour partage sur réseaux sociaux -->
-    <meta property="og:title" content="Wells Todison – Prospection B2B & Portfolios Professionnels">
-    <meta property="og:description" content="Je transforme vos leads en clients et je crée votre portfolio sur mesure, local et international.">
-    <meta property="og:image" content="URL_DE_TON_IMAGE_DE_PARTAGE">
-    <meta property="og:type" content="website">
-
-    <!-- Balise viewport pour mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>Galaxy Trading - Plateforme de Trading IA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .btn-animated {
-            transition: transform 0.3s ease, background-color 0.3s ease;
+        :root {
+            --primary: #0a0e29;
+            --secondary: #1a1f4b;
+            --accent: #00f7ff;
+            --accent2: #9d4edd;
+            --text: #ffffff;
         }
-        .btn-animated:hover {
-            transform: scale(1.05);
-            background-color: #2563EB;
+        
+        body {
+            background-color: var(--primary);
+            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
         }
-        .active-item {
-            background-color: #1e40af !important;
-            color: white !important;
+        
+        /* Animation de fond galactique */
+        .galaxy-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(125deg, #0a0e29 0%, #1a1f4b 50%, #0f1129 100%);
+            overflow: hidden;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+        
+        .nebula {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.3;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: rgba(10, 14, 41, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 247, 255, 0.2);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .nav-link {
+            color: var(--text) !important;
+            font-weight: 500;
+            transition: all 0.3s;
+            margin: 0 10px;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent) !important;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 100px;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 247, 255, 0.3);
+        }
+        
+        /* Section Fonctionnalités */
+        .features {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background: rgba(26, 31, 75, 0.6);
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s;
+            border: 1px solid rgba(0, 247, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 30px rgba(0, 247, 255, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Section Calculatrice */
+        .calculator {
+            padding: 100px 0;
+            background: rgba(10, 14, 41, 0.7);
+        }
+        
+        .calculator-card {
+            background: rgba(26, 31, 75, 0.8);
+            border-radius: 15px;
+            padding: 40px;
+            border: 1px solid rgba(0, 247, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-label {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .form-control {
+            background: rgba(10, 14, 41, 0.7);
+            border: 1px solid rgba(0, 247, 255, 0.3);
+            color: var(--text);
+            padding: 12px 15px;
+            border-radius: 10px;
+        }
+        
+        .form-control:focus {
+            background: rgba(10, 14, 41, 0.9);
+            border-color: var(--accent);
+            color: var(--text);
+            box-shadow: 0 0 0 0.25rem rgba(0, 247, 255, 0.25);
+        }
+        
+        .result-box {
+            background: rgba(10, 14, 41, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .profit {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin: 10px 0;
+        }
+        
+        /* Section Témoignages */
+        .testimonials {
+            padding: 100px 0;
+        }
+        
+        .testimonial-card {
+            background: rgba(26, 31, 75, 0.6);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 15px;
+            border: 1px solid rgba(0, 247, 255, 0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .client-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .client-role {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(10, 14, 41, 0.9);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(0, 247, 255, 0.2);
+        }
+        
+        .footer-links h5 {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(26, 31, 75, 0.6);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            opacity: 0.7;
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .floating {
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
         }
     </style>
-    <script>
-        function toggleDescription(id, item) {
-            var element = document.getElementById(id);
-            element.classList.toggle("hidden");
-            item.classList.toggle("active-item");
-        }
-    </script>
 </head>
-<body class="bg-gray-900 text-white">
-
-<header class="bg-gradient-to-r from-blue-600 via-black to-blue-900 p-6">
-    <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-3xl font-bold">Wells Todison</h1>
-        <a href="#contact" class="btn-animated bg-blue-500 px-4 py-2 rounded-xl hover:bg-blue-700 transition">Me Contacter</a>
-    </div>
-</header>
-
-<section class="container mx-auto p-6">
-    <h2 class="text-2xl font-bold mb-4">Qui suis-je ?</h2>
-    <p class="text-lg">Spécialiste indépendant de la prospection commerciale B2B, je transforme vos leads en clients.
-    J'interviens sur des campagnes de prospection multi-canal, locales et internationales, avec un accompagnement sur mesure et une approche humaine.</p>
-</section>
-
-<section class="container mx-auto p-6 bg-gray-800 rounded-xl my-6">
-    <h2 class="text-2xl font-bold mb-4">Services Proposés</h2>
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <li class="bg-gray-700 p-4 rounded-xl cursor-pointer flex items-start gap-2" onclick="toggleDescription('desc1', this)">
-            <i class="ph ph-target text-2xl"></i> Prospection commerciale B2B multi-canal
-            <p id="desc1" class="hidden mt-2">Identifier des prospects, les contacter via différents canaux et créer des opportunités d'affaires adaptées.</p>
-        </li>
-        <li class="bg-gray-700 p-4 rounded-xl cursor-pointer flex items-start gap-2" onclick="toggleDescription('desc2', this)">
-            <i class="ph ph-phone-call text-2xl"></i> Cold Calling & Closing
-            <p id="desc2" class="hidden mt-2">Contacter directement les prospects par téléphone pour conclure des ventes ou obtenir des rendez-vous.</p>
-        </li>
-        <li class="bg-gray-700 p-4 rounded-xl cursor-pointer flex items-start gap-2" onclick="toggleDescription('desc3', this)">
-            <i class="ph ph-calendar-check text-2xl"></i> Prise de rendez-vous qualifiés
-            <p id="desc3" class="hidden mt-2">Organiser des rendez-vous avec des prospects ayant un réel intérêt pour les services proposés.</p>
-        </li>
-        <li class="bg-gray-700 p-4 rounded-xl cursor-pointer flex items-start gap-2" onclick="toggleDescription('desc4', this)">
-            <i class="ph ph-user-check text-2xl"></i> Qualification de leads
-            <p id="desc4" class="hidden mt-2">Analyser et identifier les besoins des prospects afin de déterminer leur potentiel en tant que clients.</p>
-        </li>
-        <li class="bg-gray-700 p-4 rounded-xl cursor-pointer flex items-start gap-2" onclick="toggleDescription('desc5', this)">
-            <i class="ph ph-handshake text-2xl"></i> Suivi commercial et fidélisation
-            <p id="desc5" class="hidden mt-2">Maintenir une relation continue avec les clients pour assurer leur satisfaction et générer des ventes récurrentes.</p>
-        </li>
-    </ul>
-</section>
-
-<section class="container mx-auto p-6">
-    <h2 class="text-2xl font-bold mb-4">Compétences</h2>
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <li class="bg-gray-700 p-4 rounded-xl flex items-start gap-2 cursor-pointer" onclick="toggleDescription('comp1', this)">
-            <i class="ph ph-microphone text-2xl"></i> Prospection téléphonique
-            <p id="comp1" class="hidden mt-2">Maîtrise des techniques d’appel à froid et d’accroche commerciale, pour convertir un maximum de prospects en opportunités concrètes.</p>
-        </li>
-        <li class="bg-gray-700 p-4 rounded-xl flex items-start gap-2 cursor-pointer" onclick="toggleDescription('comp2', this)">
-            <i class="ph ph-seal-check text-2xl"></i> Closing de ventes B2B
-            <p id="comp2" class="hidden mt-2">Capacité à mener des négociations, à comprendre les objections et à finaliser les contrats avec assurance et méthode.</p>
-        </li>
-        <li class="bg-gray-700 p-4 rounded-xl flex items-start gap-2 cursor-pointer" onclick="toggleDescription('comp3', this)">
-            <i class="ph ph-database text-2xl"></i> Utilisation de CRM (Pipedrive, Asana)
-            <p id="comp3" class="hidden mt-2">Organisation rigoureuse des données clients et suivi efficace des opportunités via des outils CRM professionnels.</p>
-        </li>
-        <li class="bg-gray-700 p-4 rounded-xl flex items-start gap-2 cursor-pointer" onclick="toggleDescription('comp4', this)">
-            <i class="ph ph-chat-centered-text text-2xl"></i> Communication multi-canal
-            <p id="comp4" class="hidden mt-2">Maîtrise des outils de communication écrite et orale : email, LinkedIn, téléphone, afin de maximiser les chances de contact et d’engagement.</p>
-        </li>
-    </ul>
-</section>
-
-<section class="container mx-auto p-6">
-    <div class="grid grid-cols-1 gap-4">
-        <img src="LinkedIn.png" alt="Image" class="rounded-xl">
-    </div>
-</section>
-
-<section id="contact" class="container mx-auto p-6">
-    <h2 class="text-2xl font-bold mb-4">Me contacter</h2>
-    <form action="https://formsubmit.co/wellstodison@gmail.com" method="POST" class="grid grid-cols-1 gap-4">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://weTO-star.github.io/mon-portfolio/merci.html" />
-        <input type="text" name="Nom et Prénom" placeholder="Nom et Prénom" required class="p-2 rounded bg-gray-700 text-white">
-        <input type="email" name="Adresse Email" placeholder="Adresse Email" required class="p-2 rounded bg-gray-700 text-white">
-        <input type="text" name="Secteur d'activité" placeholder="Secteur d'activité" class="p-2 rounded bg-gray-700 text-white">
-        <input type="text" name="Service recherché" placeholder="Service recherché" class="p-2 rounded bg-gray-700 text-white">
-        <button type="submit" class="btn-animated bg-blue-500 px-4 py-2 rounded-xl hover:bg-blue-700 transition">Envoyer</button>
-    </form>
-    <div class="flex justify-center space-x-4 mt-6">
-        <a href="https://wa.me/261326412338" class="btn-animated bg-green-500 px-4 py-2 rounded-xl flex items-center gap-2"><i class="ph ph-whatsapp-logo"></i> WhatsApp</a>
-        <a href="mailto:wellstodison@gmail.com" class="btn-animated bg-blue-500 px-4 py-2 rounded-xl flex items-center gap-2"><i class="ph ph-envelope"></i> Email</a>
-        <a href="https://www.linkedin.com/in/wells-todison-473151259/" class="btn-animated bg-blue-700 px-4 py-2 rounded-xl flex items-center gap-2"><i class="ph ph-linkedin-logo"></i> LinkedIn</a>
-    </div>
-</section>
-
-<footer class="bg-gray-800 p-4 text-center">
-    <p>© 2025 Wells Todison - Tous droits réservés</p>
-</footer>
-
+<body>
+    <!-- Fond galactique animé -->
+    <div class="galaxy-bg" id="galaxy"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Galaxy Trading</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accueil">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fonctionnalites">Fonctionnalités</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#calculateur">Calculateur</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#temoignages">Témoignages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-2" href="#investir">Investir</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Section Hero -->
+    <section class="hero" id="accueil">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Tradez avec l'IA, Profitez de l'Espace</h1>
+                    <p>Notre plateforme de trading automatisé utilise l'intelligence artificielle la plus avancée pour générer des profits constants sur les marchés financiers. Investissez à partir de 60 000 AR et bénéficiez de rendements journaliers exceptionnels.</p>
+                    <div class="mt-4">
+                        <a href="#investir" class="btn btn-primary me-3">Commencer maintenant</a>
+                        <a href="#fonctionnalites" class="btn btn-outline-light">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center floating">
+                    <img src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-development-6521720_1280.png" alt="IA Trading" class="img-fluid" style="max-width: 80%;">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section Fonctionnalités -->
+    <section class="features" id="fonctionnalites">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technologie de Trading Avancée</h2>
+                <p>Notre plateforme combine l'IA la plus sophistiquée avec des années d'expertise en trading</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>IA Avancée</h4>
+                        <p>Notre algorithme d'IA analyse des millions de points de données en temps réel pour identifier les meilleures opportunités de trading.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Exécution Rapide</h4>
+                        <p>Exécution des trades en millisecondes grâce à notre infrastructure technologique de pointe et nos serveurs à haute fréquence.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Sécurité Maximale</h4>
+                        <p>Protocoles de sécurité bancaire de niveau militaire pour protéger vos investissements et données personnelles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section Calculateur -->
+    <section class="calculator" id="calculateur">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="calculator-card">
+                        <div class="section-title">
+                            <h2>Simulateur de Profits</h2>
+                            <p>Calculez vos gains potentiels avec notre algorithme de trading IA</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Montant d'investissement (AR)</label>
+                                    <input type="number" class="form-control" id="investment" value="60000" min="60000">
+                                    <div class="form-text">Minimum: 60 000 AR</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Période (jours)</label>
+                                    <input type="number" class="form-control" id="period" value="30" min="1">
+                                </div>
+                                <button class="btn btn-primary w-100" onclick="calculateProfit()">Calculer les profits</button>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="result-box">
+                                    <h5>Projection des gains</h5>
+                                    <p>Rendement quotidien: <strong>3%</strong></p>
+                                    <div class="profit" id="profitResult">0 AR</div>
+                                    <p>Votre investissement initial: <span id="initialAmount">60 000 AR</span></p>
+                                    <p>Valeur totale après <span id="periodDisplay">30</span> jours: <strong id="totalAmount">0 AR</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section Témoignages -->
+    <section class="testimonials" id="témoignages">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ils nous font confiance</h2>
+                <p>Découvrez les expériences de nos investisseurs satisfaits</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "J'ai commencé avec 100 000 AR il y a 3 mois et aujourd'hui mon portefeuille vaut plus de 500 000 AR. La plateforme est incroyable!"
+                        </div>
+                        <div class="client-name">Jean Rakoto</div>
+                        <div class="client-role">Investisseur depuis 2022</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "En tant que débutant, je cherchais une solution simple pour investir. Galaxy Trading a dépassé toutes mes attentes avec des rendements constants."
+                        </div>
+                        <div class="client-name">Sarah Andriana</div>
+                        <div class="client-role">Investisseuse depuis 2023</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "L'IA est vraiment impressionnante. Même pendant les périodes de volatilité du marché, ma stratégie reste profitable."
+                        </div>
+                        <div class="client-name">Marc Ravelo</div>
+                        <div class="client-role">Trader professionnel</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section CTA -->
+    <section class="calculator" id="investir">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2>Prêt à commencer votre voyage galactique?</h2>
+                    <p class="mb-4">Rejoignez des milliers d'investisseurs qui font croître leur capital avec notre technologie IA de pointe.</p>
+                    <a href="#" class="btn btn-primary btn-lg">Ouvrir un compte maintenant</a>
+                    <p class="mt-3">Investissement minimum: 60 000 AR</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4 class="navbar-brand">Galaxy Trading</h4>
+                    <p>Plateforme de trading automatisé par IA pour des investissements intelligents et rentables.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Navigation</h5>
+                        <ul>
+                            <li><a href="#accueil">Accueil</a></li>
+                            <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+                            <li><a href="#calculateur">Calculateur</a></li>
+                            <li><a href="#temoignages">Témoignages</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Légal</h5>
+                        <ul>
+                            <li><a href="#">Conditions d'utilisation</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                            <li><a href="#">Avertissement sur les risques</a></li>
+                            <li><a href="#">Mentions légales</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Contact</h5>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt me-2"></i> Antananarivo, Madagascar</li>
+                            <li><i class="fas fa-phone me-2"></i> +261 34 00 000 00</li>
+                            <li><i class="fas fa-envelope me-2"></i> contact@galaxytrading.mg</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Galaxy Trading. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Création des étoiles pour le fond galactique
+        function createStars() {
+            const galaxy = document.getElementById('galaxy');
+            const starCount = 150;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // Taille aléatoire entre 1 et 3 pixels
+                const size = Math.random() * 2 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                // Position aléatoire
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                
+                // Animation delay aléatoire
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                
+                galaxy.appendChild(star);
+            }
+            
+            // Création de nébuleuses colorées
+            const nebulaCount = 5;
+            const colors = ['#9d4edd', '#00f7ff', '#3a0ca3', '#f72585', '#4cc9f0'];
+            
+            for (let i = 0; i < nebulaCount; i++) {
+                const nebula = document.createElement('div');
+                nebula.classList.add('nebula');
+                
+                // Taille aléatoire
+                const size = Math.random() * 300 + 100;
+                nebula.style.width = `${size}px`;
+                nebula.style.height = `${size}px`;
+                
+                // Position aléatoire
+                nebula.style.left = `${Math.random() * 100}%`;
+                nebula.style.top = `${Math.random() * 100}%`;
+                
+                // Couleur aléatoire
+                nebula.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                
+                galaxy.appendChild(nebula);
+            }
+        }
+        
+        // Calcul des profits
+        function calculateProfit() {
+            const investment = parseFloat(document.getElementById('investment').value);
+            const period = parseInt(document.getElementById('period').value);
+            
+            if (investment < 60000) {
+                alert("L'investissement minimum est de 60 000 AR");
+                document.getElementById('investment').value = 60000;
+                return;
+            }
+            
+            // Calcul avec intérêts composés à 3% par jour
+            const dailyRate = 0.03;
+            const totalAmount = investment * Math.pow(1 + dailyRate, period);
+            const profit = totalAmount - investment;
+            
+            // Formatage des nombres avec séparateurs de milliers
+            const formatter = new Intl.NumberFormat('fr-MG', {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            });
+            
+            document.getElementById('profitResult').textContent = `${formatter.format(profit)} AR`;
+            document.getElementById('initialAmount').textContent = `${formatter.format(investment)} AR`;
+            document.getElementById('periodDisplay').textContent = period;
+            document.getElementById('totalAmount').textContent = `${formatter.format(totalAmount)} AR`;
+        }
+        
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            createStars();
+            calculateProfit(); // Calcul initial
+            
+            // Animation au défilement
+            const scrollElements = document.querySelectorAll('.feature-card, .testimonial-card');
+            
+            const elementInView = (el, dividend = 1) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+                );
+            };
+            
+            const displayScrollElement = (element) => {
+                element.classList.add('animated');
+            };
+            
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 1.2)) {
+                        displayScrollElement(el);
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+        });
+    </script>
 </body>
 </html>
